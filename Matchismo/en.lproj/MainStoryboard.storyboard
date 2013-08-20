@@ -237,6 +237,11 @@
                                     <action selector="flipCard:" destination="2" eventType="touchUpInside" id="JFI-O5-UOx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezI-eu-Wjl">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -246,7 +251,6 @@
                             <constraint firstItem="AlT-yu-UYU" firstAttribute="top" secondItem="d5W-eX-C7W" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2ow-q2-NJw"/>
                             <constraint firstItem="tIY-03-b0n" firstAttribute="baseline" secondItem="xxv-ji-7uY" secondAttribute="baseline" type="default" id="3in-qE-gHK"/>
                             <constraint firstItem="tIY-03-b0n" firstAttribute="baseline" secondItem="QdP-du-CuP" secondAttribute="baseline" type="default" id="58I-Zp-qHk"/>
-                            <constraint firstItem="tIY-03-b0n" firstAttribute="baseline" secondItem="RTm-tJ-J1X" secondAttribute="baseline" type="default" id="5jj-MM-U4O"/>
                             <constraint firstItem="xxv-ji-7uY" firstAttribute="leading" secondItem="MMe-SK-lql" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="7lK-9q-2za"/>
                             <constraint firstItem="tIY-03-b0n" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="8b9-2G-Olp"/>
                             <constraint firstItem="kWb-wx-mBS" firstAttribute="leading" secondItem="MMe-SK-lql" secondAttribute="leading" type="default" id="8ya-he-Z6k"/>
@@ -280,6 +284,7 @@
                             <constraint firstItem="JfB-wv-39D" firstAttribute="top" secondItem="QOT-24-9EE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dg9-JK-IIi"/>
                             <constraint firstItem="QdP-du-CuP" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="egr-2L-Kdn"/>
                             <constraint firstItem="QOT-24-9EE" firstAttribute="baseline" secondItem="d5W-eX-C7W" secondAttribute="baseline" type="default" id="epS-6X-QfR"/>
+                            <constraint firstAttribute="bottom" secondItem="ezI-eu-Wjl" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="fdR-OJ-sIw"/>
                             <constraint firstItem="QOT-24-9EE" firstAttribute="top" secondItem="QdP-du-CuP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hrx-wl-nUX"/>
                             <constraint firstItem="JfB-wv-39D" firstAttribute="leading" secondItem="AlT-yu-UYU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ia4-4Y-sty"/>
                             <constraint firstItem="QdP-du-CuP" firstAttribute="leading" secondItem="RTm-tJ-J1X" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="lDs-Xj-dd6"/>
@@ -292,10 +297,12 @@
                             <constraint firstItem="d5W-eX-C7W" firstAttribute="leading" secondItem="kWb-wx-mBS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="t9u-SH-g8L"/>
                             <constraint firstItem="1is-uE-gk8" firstAttribute="bottom" secondItem="AlT-yu-UYU" secondAttribute="bottom" type="default" id="tx0-HL-t89"/>
                             <constraint firstItem="Enh-H8-nhV" firstAttribute="top" secondItem="2bW-TY-a77" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uWD-1u-gwK"/>
+                            <constraint firstAttribute="trailing" secondItem="ezI-eu-Wjl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zG9-WM-7FP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="flipsLabel" destination="Uje-Ov-h7H" id="hvs-yM-lDr"/>
+                        <outlet property="scoreLabel" destination="ezI-eu-Wjl" id="X7y-Cp-nXG"/>
                         <outletCollection property="cardButtons" destination="2bW-TY-a77" id="YAt-sY-2fR"/>
                         <outletCollection property="cardButtons" destination="MMe-SK-lql" id="gOM-Go-aCm"/>
                         <outletCollection property="cardButtons" destination="tIY-03-b0n" id="imy-4w-tuU"/>
@@ -321,6 +328,7 @@
             <relationships>
                 <relationship kind="action" name="flipCard:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="flipsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="scoreLabel" candidateClass="UILabel"/>
                 <relationship kind="outletCollection" name="cardButtons" candidateClass="UIButton"/>
             </relationships>
         </class>
